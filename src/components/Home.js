@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 
 function Home(props){
-    console.warn(props.cardData.length);
+    console.warn(props);
     return(
         <div>
             <h1>Home Component</h1>
@@ -19,6 +19,11 @@ function Home(props){
                     onClick={()=>
                     props.addToCartHander({price:1000, name: 'I Phone 11'})}>
                         Add to cart
+                        </button>
+                         <button 
+                    onClick={()=>
+                    props.removeToCartHander()}>
+                        Remove to cart
                         </button>
                 </div>
             </div>
